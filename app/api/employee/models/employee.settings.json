@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "name": "Employee",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "job": {
+      "model": "job"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

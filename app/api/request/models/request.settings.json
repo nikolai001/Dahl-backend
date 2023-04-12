@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requests",
+  "info": {
+    "name": "Request",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Client_Name": {
+      "type": "string"
+    },
+    "Client_Email": {
+      "type": "string",
+      "required": true
+    },
+    "Client_Phone": {
+      "type": "string"
+    },
+    "Message": {
+      "type": "text"
+    },
+    "Handled": {
+      "type": "boolean",
+      "default": false
+    },
+    "Archived": {
+      "type": "datetime"
+    },
+    "admin_user": {
+      "columnName": "ArchivedBy",
+      "plugin": "admin",
+      "model": "user"
+    }
+  }
+}
