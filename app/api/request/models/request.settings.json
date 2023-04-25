@@ -17,7 +17,7 @@
     },
     "Client_Email": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "Client_Phone": {
       "type": "string"
